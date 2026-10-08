@@ -1,0 +1,13 @@
+request_id,user,model,prompt,max_tokens
+ R001 ,  Vlad  , Model A ,  EXPLAIN   PYTHON FUNCTIONS  ,50
+R002, Anna ,Model B,"  Compare lists, tuples and sets  ",80
+R003,   ,Model A,Explain JSON,40
+R004,Sam,Model A,   ,60
+R005,Maya,Model C,Learn SQL,many
+R006,Noor,Model B,Build an API,0
+R001, Vlad ,Model A,Explain duplicate records,70
+R007, Oksana ,Model C ,  READ JSON FILES  ,90
+R008,Sam,Model A, Learn SQL ,30
+R009,Iryna,   ,Explain sets,25
+   ,Dan,Model B,Explain functions,45
+R010, Lev , Model B ,  WRITE   CSV FILES  ,80
