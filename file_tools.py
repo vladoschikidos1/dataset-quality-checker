@@ -1,4 +1,5 @@
 import csv
+import json
 from pathlib import Path
 
 def load_rows(filename):
@@ -36,6 +37,30 @@ def load_rows(filename):
 
     except FileNotFoundError:
         raise
+
+def save_cleaned_records(records):
+    script_path = Path(__file__).resolve()
+    folder_path = script_path.parent
+    output = folder_path / "output" / "cleaned_requests.csv"
+
+    with open(output, "w", newline="", encoding="utf-8") as file:
+        writer = csv.DictWriter(file, fieldnames= ["request_id", "user", "model", "prompt", "max_tokens", "word_count"])
+        writer.writeheader()
+        for record in records:
+            writer.writerow(record)
+
+    return output
+
+def save_report(report):
+    script_path = Path(__file__).resolve()
+    folder_path = script_path.parent
+    output = folder_path / "output" / "quality_report.json"
+
+    with open(output, "w", encoding="utf-8") as file:
+        json.dump(report, file, indent= 4)
+
+    return output
+
 
 
 if __name__ == "__main__":
