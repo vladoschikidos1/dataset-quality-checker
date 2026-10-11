@@ -69,7 +69,7 @@ def check_records(records):
         "valid_records": len(accepted_records),
         "rejected_records": len(errors_records),
         "total_tokens": total_max_tokens,
-        "model": sorted(models),
+        "models": sorted(models),
         "errors": errors_records
     }
     summary_dict = {
